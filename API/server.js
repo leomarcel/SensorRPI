@@ -1,3 +1,6 @@
+//node --insecure-http-parser server.js
+//pm2 start server.js --node-args="--insecure-http-parser"
+
 const fetch = require('node-fetch');
 const express = require("express");
 const bodyParser = require("body-parser");
