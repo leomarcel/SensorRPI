@@ -1,0 +1,10 @@
+[Unit]
+Description=Temperature Service
+After=multi-user.target
+[Service]
+Type=idle
+ExecStart=sh /home/pi/temperature/launch.sh
+WorkingDirectory=/home/pi/temperature
+User=pi
+[Install]
+WantedBy=multi-user.target
