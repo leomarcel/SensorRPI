@@ -12,8 +12,7 @@ print("Content-type: json; charset=utf-8\n")
 humidity, temperature = Adafruit_DHT.read_retry(DHT_SENSOR, DHT_PIN)
 
 if humidity is not None and temperature is not None:
-  #print("Temp={0:0.1f}*C  Humidity={1:0.1f}%".format(temperature, humidity))
-  res = '{"Temperature":"' + str(round(temperature, 3)) + '°C", "Humidity":"' + str(round(humidity, 3)) + '%", "Date":"' + now + '"}'
+  res = '{"temperature": ' + str(round(temperature, 3)) + ', "humidity": ' + str(round(humidity, 3)) + ', "date":"' + now + '"}'
   print(res)
 else:
   print('{"Status": "error"}')
