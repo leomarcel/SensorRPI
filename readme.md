@@ -4,11 +4,7 @@
 ### Sensor Product : AZDelivery DHT22 AM2302
 
 ### TODO 
-- [x] Console Sensor
+- [x] Console
 - [x] Server
-- [ ] Config RPI Wifi
-- [ ] Create multiple language
-- [ ] API
-- [ ] Interface
-- [ ] All Readme
-
+- [x] API
+- [ ] Documentation
