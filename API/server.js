@@ -6,13 +6,11 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const http = require('http');
 
-
 const TIMEFETCH = 1000;
 const LIMITWORKERMAX = 10; //false = unlimited
 const URL = "http://192.168.0.50:8888/humidity.py";
 
 const app = express();
-const router = express.Router();
 const PORT = 4000;
 
 let nbErr = 0;
@@ -66,7 +64,6 @@ app.use((req, res, next) => {
 
 app.use(bodyParser.json());
 app.use("/", get);
-
 
 const normalizePort = val => {
   const port = parseInt(val, 10);

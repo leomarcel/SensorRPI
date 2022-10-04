@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 const clc = require('cli-color');
 
 const TIMEDISPLAY = 20;
-const TIMEFETCH = 1000;
+const TIMEFETCH = 2000;
 const LIMITWORKERMAX = 10; //false = unlimited
 const LIMITWORKERWARN = LIMITWORKERMAX - LIMITWORKERMAX / 4;
 const URL = "http://192.168.0.50:8888/humidity.py";
