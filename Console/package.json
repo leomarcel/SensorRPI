@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "cli-color": "^2.0.3",
-    "node-fetch": "^2.6.7"
+    "child_process": "^1.0.2",
+    "cli-color": "^2.0.3"
   }
 }

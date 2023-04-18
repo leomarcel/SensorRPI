@@ -1,7 +1,7 @@
 //node --insecure-http-parser server.js
 //pm2 start server.js --node-args="--insecure-http-parser"
 
-const fetch = require('node-fetch');
+var child_process = require("child_process");
 const express = require("express");
 const bodyParser = require("body-parser");
 const http = require('http');
@@ -19,7 +19,8 @@ let lastData = "";
 
 async function getData() {
   try {
-    return await fetch(URL).then(res => res.json());
+    let res = child_process.execSync("curl -s " + URL);
+    return JSON.parse(res.toString('UTF8'));
   } catch (e) {
     return false;
   }

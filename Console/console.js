@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+var child_process = require("child_process");
 const clc = require('cli-color');
 
 const TIMEDISPLAY = 20;
@@ -30,7 +30,8 @@ function print(data){
 
 async function getData() {
   try {
-    return await fetch(URL).then(res => res.json());
+    let res = child_process.execSync("curl -s " + URL);
+    return JSON.parse(res.toString('UTF8'));
   } catch (e) {
     return false;
   }
