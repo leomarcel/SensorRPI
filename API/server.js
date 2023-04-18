@@ -1,5 +1,6 @@
-//node --insecure-http-parser server.js
-//pm2 start server.js --node-args="--insecure-http-parser"
+// Homebridge
+// cd /homebridge && git clone git@github.com:leomarcel/SensorRPI.github
+// cd /var/lib/homebridge/SensorRPI/API/ && npm i && pm2 start server.js
 
 var child_process = require("child_process");
 const express = require("express");
